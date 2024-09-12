@@ -1,0 +1,91 @@
+<!-- HTML lists are used to group related items and come in three main types: ordered lists (<ol>), unordered lists (<ul>), and description lists (<dl>). Each type has various attributes that can be used to modify their behavior or appearance.
+
+  1. Unordered List (<ul>)
+  Attributes:
+  type: Specifies the bullet style (circle, disc, square).
+  2. Ordered List (<ol>)
+  Attributes:
+  type: Defines the numbering style (1, A, a, I, i).
+  start: Specifies the starting number of the list.
+  reversed: Reverses the order of the list.
+  3. Description List (<dl>)
+  Attributes:
+  <dt>: Defines the term/name in a description list.
+  <dd>: Defines the description/details of the term.
+  Complete Working Code with All List Tags and Attributes -->
+
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Lists Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        ul, ol, dl {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Unordered List -->
+    <h2>Unordered List (`<ul>`) with Attributes</h2>
+    <ul type="circle">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <ul type="square">
+        <li>Square Bullet 1</li>
+        <li>Square Bullet 2</li>
+    </ul>
+
+    <!-- Ordered List -->
+    <h2>Ordered List (`<ol>`) with Attributes</h2>
+
+    <!-- Numbered list starting from 5 -->
+    <ol type="1" start="5">
+        <li>Numbered Item 5</li>
+        <li>Numbered Item 6</li>
+        <li>Numbered Item 7</li>
+    </ol>
+
+    <!-- Uppercase Alphabetic list -->
+    <ol type="A">
+        <li>Uppercase A</li>
+        <li>Uppercase B</li>
+    </ol>
+
+    <!-- Lowercase Roman list, reversed -->
+    <ol type="i" reversed>
+        <li>Item i</li>
+        <li>Item ii</li>
+    </ol>
+
+    <!-- Description List -->
+    <h2>Description List (`<dl>`) with Terms and Descriptions</h2>
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language, the standard language for creating web pages.</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets, used for styling HTML elements.</dd>
+        <dt>JavaScript</dt>
+        <dd>A programming language used to create dynamic content on websites.</dd>
+    </dl>
+
+</body>
+
+</html>

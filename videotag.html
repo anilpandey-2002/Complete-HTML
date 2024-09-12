@@ -1,0 +1,50 @@
+<!-- Explanation of Attributes:
+src: Specifies the path to the video file. This is not required if you use the <source> elements inside the <video> tag.
+controls: Adds playback controls (play, pause, volume) to the video.
+autoplay: The video will start playing as soon as it is ready.
+loop: The video will loop continuously once it ends.
+muted: Mutes the audio of the video by default.
+preload: Specifies if and how the video should be loaded when the page is loaded. Options include:
+auto: The browser should load the entire video.
+metadata: Only metadata (e.g., duration) should be loaded.
+none: The video should not be preloaded.
+poster: Specifies an image to be shown while the video is downloading or until the user hits the play button.
+width: Sets the width of the video player (in pixels).
+height: Sets the height of the video player (in pixels).
+crossorigin: Configures how to handle cross-origin requests for the video. anonymous means no credentials are sent.
+playsinline: Allows the video to play inline on mobile devices instead of going fullscreen.
+disablepictureinpicture: Disables the picture-in-picture mode if supported by the browser. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Example</title>
+</head>
+<body>
+    <h1>Example Video with All Attributes</h1>
+    
+    <video 
+        src="example.mp4" 
+        controls 
+        autoplay 
+        loop 
+        muted 
+        preload="auto" 
+        poster="poster.jpg" 
+        width="640" 
+        height="360" 
+        crossorigin="anonymous"
+        playsinline
+        disablepictureinpicture
+        >
+        <source src="example.mp4" type="video/mp4">
+        <source src="example.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+
+    <p>Some text below the video.</p>
+</body>
+</html>

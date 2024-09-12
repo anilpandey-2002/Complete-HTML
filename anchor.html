@@ -1,0 +1,94 @@
+<!-- The <a> (anchor) tag in HTML is used to create hyperlinks, allowing users to navigate from one webpage to another or to different sections within the same page. The <a> tag is highly versatile, with many attributes that customize its behavior and appearance.
+
+  Attributes of the <a> Tag:
+  href: Specifies the URL of the page the link goes to.
+  target: Specifies where to open the linked document (_self, _blank, _parent, _top, or a specific frame name).
+  rel: Specifies the relationship between the current document and the linked document (e.g., nofollow, noopener, noreferrer).
+  download: Indicates that the target should be downloaded when a user clicks on the hyperlink.
+  type: Specifies the MIME type of the linked document.
+  hreflang: Specifies the language of the linked document.
+  ping: A space-separated list of URLs to which, when the hyperlink is followed, the browser will send a POST request.
+  referrerpolicy: Controls the referrer information sent when clicking on the link (no-referrer, origin, strict-origin, etc.).
+  name: Defines a bookmark within a page that can be linked to.
+  id: A unique identifier used to link to an anchor from other links or scripts.
+  class: Allows CSS to style the link.
+  title: Provides additional information about the link when hovered over.
+  accesskey: Specifies a shortcut key to activate/focus the element.
+  tabindex: Specifies the tab order of an element when tabbing through the page.
+  aria-*: ARIA attributes to improve accessibility for users with disabilities. -->
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anchor Tag Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .download-link {
+            display: block;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .internal-link {
+            color: #ff5722;
+        }
+
+        .external-link {
+            color: #2196F3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Anchor Tag with All Attributes</h1>
+
+    <!-- Anchor with href and title -->
+    <p><a href="https://example.com" title="Visit Example Website">Visit Example Website</a></p>
+
+    <!-- Anchor with href, target, and rel -->
+    <p><a href="https://example.com" target="_blank" rel="noopener noreferrer" class="external-link">Open Example in New
+            Tab</a></p>
+
+    <!-- Anchor with download attribute -->
+    <a href="sample.pdf" download="SampleDownload.pdf" class="download-link">Download Sample PDF</a>
+
+    <!-- Anchor with type and hreflang attributes -->
+    <p><a href="https://example.com/de" hreflang="de" type="text/html">Visit German Version of Example</a></p>
+
+    <!-- Anchor with ping attribute -->
+    <p><a href="https://example.com" ping="https://example.com/log-click">Visit Example with Ping</a></p>
+
+    <!-- Anchor with referrerpolicy -->
+    <p><a href="https://example.com" referrerpolicy="no-referrer" class="external-link">Visit Example with No Referrer</a></p>
+
+    <!-- Anchor used as a bookmark -->
+    <h2 id="section1">Section 1</h2>
+    <p>This is Section 1. <a href="#section2" class="internal-link">Go to Section 2</a></p>
+
+    <!-- Another bookmark link -->
+    <h2 id="section2">Section 2</h2>
+    <p>This is Section 2. <a href="#section1" class="internal-link">Go back to Section 1</a></p>
+
+    <!-- Anchor with accesskey and tabindex -->
+    <p><a href="https://example.com" accesskey="e" tabindex="1" class="external-link">Visit Example with Access Key "e"</a></p>
+
+    <!-- Anchor with ARIA attributes for accessibility -->
+    <p><a href="https://example.com" aria-label="Example Website" role="link" class="external-link">Visit Example with
+            ARIA Label</a></p>
+
+</body>
+
+</html>

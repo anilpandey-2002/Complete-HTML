@@ -1,0 +1,68 @@
+<!-- The <picture> element in HTML is used to provide multiple image sources for different scenarios, such as different screen sizes or resolutions. It allows you to define various images for responsive designs, enabling the browser to select the most appropriate one based on the conditions specified.
+
+  Attributes and Elements in <picture>
+  <picture>: The container element that holds multiple <source> elements and an <img> element.
+  
+  <source>: Specifies multiple image sources with attributes:
+  
+  srcset: Defines the image file URL(s) and sizes.
+  media: Specifies media conditions (e.g., screen width) for choosing the source.
+  type: Specifies the MIME type of the image (e.g., image/webp).
+  <img>: The fallback image element that is always required and serves as a default if no <source> conditions are met.
+  
+  src: URL of the fallback image.
+  alt: Provides alternative text for accessibility.
+  width and height: Specifies the intrinsic width and height of the image.
+  loading: Lazy loading attribute (lazy, eager).
+  decoding: Suggests decoding preference (async, sync). -->
+
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Example</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .image-container {
+            max-width: 100%;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-container">
+        <picture>
+            <!-- Image for large screens -->
+            <source srcset="images/large-image.webp" media="(min-width: 1024px)" type="image/webp">
+            <source srcset="images/large-image.jpg" media="(min-width: 1024px)" type="image/jpeg">
+
+            <!-- Image for medium screens -->
+            <source srcset="images/medium-image.webp" media="(min-width: 768px)" type="image/webp">
+            <source srcset="images/medium-image.jpg" media="(min-width: 768px)" type="image/jpeg">
+
+            <!-- Image for small screens -->
+            <source srcset="images/small-image.webp" media="(max-width: 767px)" type="image/webp">
+            <source srcset="images/small-image.jpg" media="(max-width: 767px)" type="image/jpeg">
+
+            <!-- Fallback image -->
+            <img src="images/fallback.jpg" alt="Beautiful Landscape" width="800" height="600" loading="lazy" decoding="async">
+        </picture>
+    </div>
+</body>
+
+</html>

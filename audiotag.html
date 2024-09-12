@@ -1,0 +1,38 @@
+<!-- 
+The <audio> tag in HTML is used to embed audio files in a web page. It supports several attributes to control its behavior. Here's a breakdown of the attributes you can use:
+
+  src: Specifies the URL of the audio file.
+  controls: Adds basic playback controls (play, pause, volume).
+  autoplay: Starts playing the audio as soon as it is ready.
+  loop: Makes the audio start over again, every time it is finished.
+  muted: Mutes the audio by default.
+  preload: Specifies how the audio file should be loaded when the page loads. Options are:
+  auto: The browser should preload the audio file.
+  metadata: Only the metadata (e.g., duration) should be preloaded.
+  none: The audio file should not be preloaded. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Tag Example</title>
+</head>
+<body>
+    <h1>Audio Example with All Attributes</h1>
+
+    <!-- Audio element with all attributes used -->
+    <audio 
+        src="audio\audio.mp3" 
+        controls 
+        autoplay 
+        loop 
+        muted 
+        preload="auto">
+        Your browser does not support the audio element.
+    </audio>
+
+    <p>Ensure the path to the audio file is correct to hear the audio playback.</p>
+
+</body>
+</html>

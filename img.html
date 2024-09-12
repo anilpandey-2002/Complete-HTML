@@ -1,0 +1,46 @@
+<!-- Explanation of Attributes:
+src: Specifies the path to the image file. This is a required attribute.
+alt: Provides alternative text for the image if it cannot be displayed. This is a required attribute for accessibility.
+title: Offers additional information about the image, which appears as a tooltip when the user hovers over the image.
+width: Sets the width of the image (in pixels).
+height: Sets the height of the image (in pixels).
+longdesc: Provides a link to a detailed description of the image (this attribute is not widely supported and can be omitted if not needed).
+srcset: Allows the browser to choose the appropriate image source based on the device's screen size and resolution.
+sizes: Defines the sizes of images to be used based on the viewport size. It works in conjunction with srcset.
+loading: Controls when the image should be loaded. lazy defers loading the image until it is needed.
+decoding: Specifies how the image should be decoded. async allows the browser to decode the image asynchronously.
+crossorigin: Configures how to handle cross-origin requests for the image. anonymous means no credentials are sent.
+usemap: Associates the image with a <map> element for client-side image maps. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Example</title>
+</head>
+<body>
+    <h1>Example Image with All Attributes</h1>
+    
+    <img 
+        src="example.jpg" 
+        alt="A description of the image" 
+        title="Tooltip text when hovering over the image" 
+        width="600" 
+        height="400" 
+        longdesc="longdescription.html" 
+        srcset="example-small.jpg 480w, example-medium.jpg 800w, example-large.jpg 1200w" 
+        sizes="(max-width: 600px) 100vw, 50vw" 
+        loading="lazy" 
+        decoding="async"
+        crossorigin="anonymous"
+        usemap="#imagemap"
+    >
+    
+    <map name="imagemap">
+        <area shape="rect" coords="34,44,270,350" href="https://example.com" alt="Example Area">
+    </map>
+
+    <p>Some text below the image.</p>
+</body>
+</html>

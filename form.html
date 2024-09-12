@@ -1,0 +1,119 @@
+<!-- The <form> tag in HTML is used to create a form for user input. It comes with various attributes that control its behavior, such as how data is sent and processed. Below is a detailed explanation of the <form> tag, its attributes, and a working example that demonstrates all these features.
+
+  Attributes of the <form> Tag:
+  action: Specifies the URL where the form data is sent after submission.
+  method: Defines the HTTP method (GET or POST) used when sending form data.
+  enctype: Specifies the encoding type of the form data when submitted (application/x-www-form-urlencoded, multipart/form-data, text/plain).
+  target: Specifies where to display the response (_self, _blank, _parent, _top).
+  autocomplete: Enables or disables autocomplete for the form (on, off).
+  novalidate: Disables form validation when submitting.
+  name: Specifies the form's name, useful for scripting.
+  rel: Specifies the relationship between the form and the target.
+  accept-charset: Specifies the character encodings the server can handle (UTF-8, ISO-8859-1, etc.). -->
+
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input, textarea, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Complete HTML Form with All Attributes</h1>
+
+    <form action="/submit-form" method="POST" enctype="multipart/form-data" target="_blank" autocomplete="on"
+        novalidate name="userForm" rel="noopener" accept-charset="UTF-8">
+
+        <!-- Text Input -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <!-- Email Input -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <!-- Password Input -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+        <!-- File Upload -->
+        <label for="file">Upload File:</label>
+        <input type="file" id="file" name="file">
+
+        <!-- Text Area -->
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Enter your message"></textarea>
+
+        <!-- Select Dropdown -->
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <!-- Checkbox -->
+        <label>
+            <input type="checkbox" name="subscribe" value="yes"> Subscribe to newsletter
+        </label>
+
+        <!-- Radio Buttons -->
+        <label>Choose your plan:</label>
+        <label>
+            <input type="radio" name="plan" value="basic"> Basic
+        </label>
+        <label>
+            <input type="radio" name="plan" value="premium"> Premium
+        </label>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+
+    </form>
+
+</body>
+
+</html>

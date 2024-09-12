@@ -1,0 +1,49 @@
+<!-- The <figure> tag in HTML is used to encapsulate media such as images, videos, or illustrations, along with a caption. The <figcaption> tag is typically used inside <figure> to provide a caption or description for the media.
+
+  Attributes for <figure> Tag
+  The <figure> tag itself does not have many attributes. It mainly relies on attributes of the child elements (like <img>, <video>, etc.) to achieve its functionality. However, the following attributes can be applied to the <figure> tag:
+  
+  class: Specifies one or more class names for the element.
+  id: Specifies a unique ID for the element.
+  style: Applies inline CSS styles to the element.
+  title: Provides additional information about the element, typically as a tooltip. -->
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figure Tag Example</title>
+    <style>
+        /* Some basic styling for demonstration */
+        .figure-container {
+            border: 1px solid #ccc;
+            padding: 10px;
+            max-width: 600px;
+            margin: auto;
+        }
+        .figure-caption {
+            font-style: italic;
+            text-align: center;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Figure Tag Example</h1>
+
+    <figure class="figure-container" id="example-figure" style="background-color: #f9f9f9;" title="An example of using the figure tag">
+        <img src="https://via.placeholder.com/600x400" alt="Placeholder Image" width="600" height="400">
+        <figcaption class="figure-caption">This is a caption for the placeholder image.</figcaption>
+    </figure>
+
+    <figure class="figure-container" id="example-video" style="background-color: #f9f9f9;" title="An example of using the figure tag with video">
+        <video controls width="600">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <figcaption class="figure-caption">This is a caption for the video.</figcaption>
+    </figure>
+
+</body>
+</html>

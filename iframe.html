@@ -1,0 +1,57 @@
+<!-- The <iframe> tag in HTML is used to embed another HTML document within the current page. It's commonly used to include content such as videos, maps, or other web pages.
+
+  Attributes for <iframe> Tag
+  The <iframe> tag supports several attributes that control its behavior and appearance:
+  
+  src: Specifies the URL of the document to embed.
+  width: Specifies the width of the iframe.
+  height: Specifies the height of the iframe.
+  name: Assigns a name to the iframe, which can be used as a target for links.
+  title: Provides a title for the iframe, which helps with accessibility.
+  frameborder: Specifies whether to display a border around the iframe (deprecated in HTML5; use CSS instead).
+  scrolling: Specifies whether to show scrollbars (deprecated in HTML5; use CSS instead).
+  sandbox: Enables an extra set of restrictions for the content in the iframe (e.g., preventing scripts from running).
+  allow: Specifies features that the iframe is allowed to use (e.g., camera, microphone).
+  allowfullscreen: Allows the iframe content to be displayed in full-screen mode.
+  loading: Specifies when to load the iframe (e.g., lazy for lazy loading). -->
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe Tag Example</title>
+    <style>
+        /* Basic styling for demonstration */
+        .iframe-container {
+            border: 2px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            max-width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Iframe Tag Example</h1>
+
+    <div class="iframe-container">
+        <!-- Iframe with various attributes -->
+        <iframe
+            src="https://www.example.com" 
+            width="600" 
+            height="400" 
+            name="example-iframe"
+            title="Example Iframe"
+            frameborder="0"  <!-- Deprecated in HTML5, use CSS border instead -->
+            scrolling="auto" <!-- Deprecated in HTML5, use CSS overflow instead -->
+            sandbox="allow-same-origin allow-scripts"
+            allow="fullscreen; geolocation"
+            allowfullscreen
+            loading="lazy">
+        </iframe>
+    </div>
+
+    <p>The iframe above embeds the content from <a href="https://www.example.com" target="_blank">Example.com</a>.</p>
+
+</body>
+</html>
